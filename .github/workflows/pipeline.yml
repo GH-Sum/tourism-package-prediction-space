@@ -1,7 +1,8 @@
 name: tourism_package_prediction
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [main]
 
 jobs:
 
