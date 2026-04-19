@@ -1,7 +1,11 @@
 import streamlit as st
 import pandas as pd
-from huggingface_hub import hf_hub_download
+from huggingface_hub import hf_hub_download, login
 import joblib
+import os
+
+# Log in to Hugging Face Hub (this will use the HF_TOKEN environment variable from Space secrets)
+login(token=os.getenv("HF_TOKEN"))
 
 # Constants for Hugging Face Hub
 MODEL_REPO_ID = "HF-Sum/tourism-package-prediction-model" # IMPORTANT: Replace with your actual Hugging Face model repo ID
